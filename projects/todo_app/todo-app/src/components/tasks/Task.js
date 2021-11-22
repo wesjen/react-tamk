@@ -8,6 +8,7 @@ function Task(props) {
     done: "Is this done or not",
   });
 
+  // TODO : ICONS for remove
   return (
     <div className="task-container">
       <button>Done</button>
