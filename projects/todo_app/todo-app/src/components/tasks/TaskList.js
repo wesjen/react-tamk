@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import Task from "./Task";
 
 function TaskList() {
-  const [todos, setTodos] = useState([]);
+  // TODO : ARRAY OR USESTATE FOR TASK-OBJECTS
 
   const makeRows = () => {
     let returnableRows;
