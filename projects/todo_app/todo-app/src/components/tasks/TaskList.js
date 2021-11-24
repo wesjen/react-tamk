@@ -2,10 +2,28 @@ import React, { useState } from "react";
 import Task from "./Task";
 
 function TaskList(props) {
-  let todos = [<Task />, <Task />];
+  let uniqueID = 0;
+  let todos = [
+    <Task
+      id={++uniqueID}
+      title="Wash the dishes"
+      description="Wash them propely"
+      date="2021-4-8"
+      tag="Chores"
+      done="false"
+    />,
+    <Task
+      id={++uniqueID}
+      title="Walk the dog"
+      description="10 km"
+      tag="Exercise"
+      done="done"
+    />,
+    ,
+  ];
   // TODO : ARRAY OR USESTATE FOR TASK-OBJECTS
 
-  // Add the tasks
+  // Add the tasks§
   const makeRows = () => {
     let returnableRows = [];
     // // TODO: For loop for getting all the task objects

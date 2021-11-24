@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 function Task(props) {
   const [task, setTask] = useState({
-    title: "This is Title!",
-    description: "Here comes description",
-    date: "Reserved for date",
-    tag: "Tag comes in here!",
+    title: props.title,
+    description: props.description,
+    date: props.date,
+    tag: props.tag,
     done: "Is this done or not",
   });
 
