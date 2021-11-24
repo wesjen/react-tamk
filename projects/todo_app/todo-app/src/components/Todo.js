@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import Home from "./interfaces/Home";
 import "./Todo.css";
 
 function ToDo() {
   // TASKS
   // NÄKYMÄVALITSIN
   // VALIKKO
-  return <p>I am return</p>;
+  return <Home />;
 }
 
 export default ToDo;

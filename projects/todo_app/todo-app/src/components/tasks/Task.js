@@ -5,17 +5,19 @@ function Task(props) {
     title: "This is Title!",
     description: "Here comes description",
     date: "Reserved for date",
+    tag: "Tag comes in here!",
     done: "Is this done or not",
   });
 
-  // TODO : ICONS for remove
+  // TODO : ICONS
   return (
     <div className="task-container">
-      <button>Done</button>
       <h2>{task.title}</h2>
       <p>{task.description}</p>
       <p>{task.date}</p>
+      <p>{task.tag}</p>
       <button>Remove</button>
+      <button>Done</button>
     </div>
   );
 }

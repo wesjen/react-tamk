@@ -1,5 +1,26 @@
-body {
-  background-color: rgb(60, 60, 60);
+body,
+body > * {
+  background-color: rgb(36, 36, 36);
+  display: block;
+}
+
+p,
+h1,
+h2 {
+  color: white;
+}
+
+.task-container {
+  padding: 10%;
+  background-color: rgb(85, 85, 85);
+}
+
+.task-list-container {
+  margin: auto;
+}
+
+.task-list-container > table {
+  margin: auto;
 }
 
 /* TODO TASK CONTAINER */
