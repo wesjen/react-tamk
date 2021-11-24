@@ -6,7 +6,7 @@ function Task(props) {
     description: props.description,
     date: props.date,
     tag: props.tag,
-    done: "Is this done or not",
+    done: props.done,
   });
 
   // TODO : ICONS
