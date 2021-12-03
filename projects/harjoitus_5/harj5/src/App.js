@@ -1,25 +1,15 @@
 import "./App.css";
-import { useEffect } from "react";
+import Database from "./database";
 
 function App() {
-  useEffect(() => {
-    const getBirds = async () => {
-      let tasksFromServer = await fetchBirds();
-      console.log(tasksFromServer);
-    };
-
-    getBirds();
-  }, []);
-
-  // Fetch Tasks
-  const fetchBirds = async () => {
-    const res = await fetch("http://localhost:3010/birds");
-    const data = await res.json();
-
-    return data;
-  };
-
-  return <div className="App"></div>;
+  // TODO: MAKE INPUT FIELDS AND ADD TO DATABASE
+  return (
+    <div className="App">
+      <input type="text" name="birdType"></input>
+      <input type="date"></input>
+      <input type="submit"></input>
+    </div>
+  );
 }
 
 export default App;
