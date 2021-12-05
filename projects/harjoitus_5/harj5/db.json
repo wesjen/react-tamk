@@ -3,14 +3,16 @@
     {
       "id": 1,
       "birdType": "Swan",
-      "timeCptured": "2021-7-20",
-      "timePosted": "2021-7-21"
+      "timeCaptured": "2021-7-20",
+      "timePosted": "2021-7-21",
+      "location": "Urjala"
     },
     {
       "id": 2,
       "birdType": "Raven",
-      "timeCptured": "2021-8-6",
-      "timePosted": "2021-10-11"
+      "timeCaptured": "2021-8-6",
+      "timePosted": "2021-10-11",
+      "location": "Tampere"
     }
   ]
 }
