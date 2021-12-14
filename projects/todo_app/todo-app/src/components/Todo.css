@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;500;700&family=Inconsolata:wght@300&family=Indie+Flower&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap");
 
 body,
 body > * {
@@ -21,12 +22,32 @@ h2 {
   padding: 2%;
   background-color: rgb(85, 85, 85);
   border-radius: 1.5em;
-  margin: 1%;
+  display: flex;
+}
+
+.task-items {
+  flex: 4;
+}
+
+.task-icons {
   flex: 1;
+}
+
+.task-icons > * {
+  width: 100%;
 }
 
 .task-container > * {
   margin: 0.5em;
+}
+
+/*TASKS - TAGS */
+.Chores {
+  background-color: brown;
+}
+
+.task-tags {
+  font-family: "Nova Mono", monospace;
 }
 
 /* TASK LIST */
@@ -34,15 +55,6 @@ h2 {
   margin: auto;
   width: 50vw;
   display: flex;
-}
-
-.task-list-container > table {
-  margin: auto;
-}
-
-/*TASKS - TAGS */
-.Chores {
-  background-color: brown;
 }
 
 /* MENU */
