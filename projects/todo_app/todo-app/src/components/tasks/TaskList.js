@@ -1,53 +1,51 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Task from "./Task";
 
 function TaskList(props) {
   let uniqueID = 0;
-  let todos = [
-    <Task
-      id={++uniqueID}
-      title="Wash the dishes"
-      description="Wash them propely"
-      date="2021-4-8"
-      tag="Chores"
-      done="false"
-    />,
-    <Task
-      id={++uniqueID}
-      title="Walk the dog"
-      description="10 km"
-      tag="Exercise"
-      done="done"
-    />,
-    ,
-  ];
-  // TODO : ARRAY OR USESTATE FOR TASK-OBJECTS
+  const [todos, setTodos] = useState([]);
 
-  // Add the tasks§
+  useEffect(() => {
+    const getTaskDB = async () => {
+      let tasks = await fetchTasks();
+      setTodos(tasks);
+    };
+
+    getTaskDB();
+  }, []);
+
+  // Fetch Tasks
+  const fetchTasks = async () => {
+    let tasks = await fetch("http://localhost:3010/tasks");
+    let data = await tasks.json();
+
+    return data;
+  };
+
+  // Make the rows to show all rows
   const makeRows = () => {
     let returnableRows = [];
-    // // TODO: For loop for getting all the task objects
+
     for (let task of todos) {
       returnableRows.push(
-        <tr>
-          <td>{task}</td>
-        </tr>
+        <Task
+          key={task.id}
+          id={task.id}
+          title={task.title}
+          description={task.description}
+          date={task.date}
+          tag={task.tag}
+          done={task.done}
+        />
       );
     }
     return returnableRows;
   };
 
-  const newTodo = () => {
-    let tmp = new Task(props.title, props.description, props.date);
-    todos.push(tmp);
-  };
-
   // LISTS ALL TASKS
   return (
-    <div class="task-list-container">
-      <table>
-        <tbody>{makeRows()}</tbody>
-      </table>
+    <div class="task-list-container" key={Math.random()}>
+      {makeRows()}
     </div>
   );
 }

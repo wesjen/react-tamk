@@ -13,17 +13,36 @@ h2 {
   color: white;
 }
 
+/* TODO TASK CONTAINER */
+/* TASK-LIST CONTAINER */
+
+/* TASK - SINGLE TASK CONTAINER */
 .task-container {
-  padding: 10%;
+  padding: 2%;
   background-color: rgb(85, 85, 85);
+  border-radius: 1.5em;
+  margin: 1%;
+  flex: 1;
 }
 
+.task-container > * {
+  margin: 0.5em;
+}
+
+/* TASK LIST */
 .task-list-container {
   margin: auto;
+  width: 50vw;
+  display: flex;
 }
 
 .task-list-container > table {
   margin: auto;
+}
+
+/*TASKS - TAGS */
+.Chores {
+  background-color: brown;
 }
 
 /* MENU */
@@ -36,13 +55,10 @@ h2 {
 .menu-bar button {
   font-family: "Comfortaa", cursive;
   font-weight: bold;
+  font-size: 1.5em;
   border-radius: 0.5em;
   padding: 2%;
   margin: 0.2%;
   background-color: rgb(53, 255, 255);
-  font-size: 1.5em;
   border-color: rgb(53, 255, 255);
 }
-
-/* TODO TASK CONTAINER */
-/* TASK-LIST CONTAINER */
