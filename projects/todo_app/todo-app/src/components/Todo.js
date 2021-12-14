@@ -16,7 +16,7 @@ function ToDo() {
 
   return (
     <div>
-      <div class="menu-bar">
+      <div className="menu-bar">
         <button onClick={() => changeInterface(<Home />)}>Home</button>
         <button onClick={() => changeInterface(<Info />)}>Info</button>
       </div>
