@@ -23,5 +23,20 @@ h2 {
   margin: auto;
 }
 
+/* MENU */
+.menu-bar {
+  text-align: center;
+  padding: 2%;
+}
+
+/* MENU - BUTTONS */
+.menu-bar button {
+  border-radius: 0.5em;
+  padding: 2%;
+  margin: 0.2%;
+  background-color: aqua;
+  font-size: 1.5em;
+}
+
 /* TODO TASK CONTAINER */
 /* TASK-LIST CONTAINER */
