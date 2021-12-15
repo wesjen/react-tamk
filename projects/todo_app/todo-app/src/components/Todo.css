@@ -74,3 +74,8 @@ h2 {
   background-color: rgb(53, 255, 255);
   border-color: rgb(53, 255, 255);
 }
+
+/* INFO */
+.info-div {
+  text-align: center;
+}
