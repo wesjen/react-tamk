@@ -10,9 +10,6 @@ function Task(props) {
     done: props.done,
   });
 
-  // Removes task
-  const removeTask = () => setTask({ ...task, removed: true });
-
   // TODO : ICONS
   return (
     <div className={`task-container ${task.tag}`}>
@@ -25,11 +22,9 @@ function Task(props) {
       <div className="task-icons">
         <AiOutlineClose
           style={{ color: "red", cursor: "pointer" }}
-          onClick={removeTask}
+          onClick={() => props.delete(props.id)}
         />
-        <AiOutlineCheck
-          style={{ color: "green", cursor: "pointer", size: "2em" }}
-        />
+        <input type="checkbox"></input>
       </div>
     </div>
   );
