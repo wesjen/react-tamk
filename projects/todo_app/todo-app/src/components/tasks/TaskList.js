@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Task from "./Task";
-import AddTask from "../interfaces/AddTask";
+import AddTask from "./AddTask";
 
 function TaskList(props) {
   let uniqueID = 0;
   const [todos, setTodos] = useState([]);
+  var showAddTaskForm = false;
 
   useEffect(() => {
     const getTaskDB = async () => {
@@ -69,8 +70,14 @@ function TaskList(props) {
 
   // LISTS ALL TASKS
   return (
-    <div class="task-list-container" key={Math.random()}>
-      {makeRows()}
+    <div className="task-list-div" key={Math.random()}>
+      {showAddTaskForm ? (
+        <AddTask />
+      ) : (
+        <button className="task-add-btn">Add new task</button>
+      )}
+      <h1>Tasks</h1>
+      <div className="task-list-container">{makeRows()}</div>
     </div>
   );
 }

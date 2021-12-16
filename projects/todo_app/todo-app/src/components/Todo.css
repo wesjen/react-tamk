@@ -23,6 +23,7 @@ h2 {
   background-color: rgb(85, 85, 85);
   border-radius: 1.5em;
   display: flex;
+  margin: 0.5%;
 }
 
 .task-items {
@@ -50,8 +51,17 @@ h2 {
   font-family: "Nova Mono", monospace;
 }
 
+/* TASK ADD - BUTTON */
+/*.task-add-btn {
+}
+*/
+
 /* TASK LIST */
+.task-list-div {
+  text-align: center;
+}
 .task-list-container {
+  text-align: left;
   margin: auto;
   width: 50vw;
   display: flex;
