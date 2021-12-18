@@ -1,24 +1,71 @@
 {
   "tasks": [
     {
-      "id": 1,
-      "title": "Wash the dishes",
-      "description": "Wash them propely",
-      "date": "2021-4-8",
-      "tag": "Chores",
-      "done": false
-    },
-    {
       "id": 2,
       "title": "Walk the dog",
       "description": "10 KM",
       "tag": "Exercise",
-      "done": true
-    }, {
-      "id": 3,
-      "title": "Go to store",
-      "tag": "Chores",
-      "done": false
+      "tagColor": "brown"
+    },
+    {
+      "title": "Test add",
+      "description": "Test description",
+      "date": "0202-01-03",
+      "tag": "TestTag",
+      "id": 8
+    },
+    {
+      "title": "Testing!",
+      "description": "Test description",
+      "date": "0202-01-03",
+      "tag": "TestTag",
+      "id": 12
+    },
+    {
+      "id": 13
+    },
+    {
+      "id": 14
+    },
+    {
+      "title": "sgsegs",
+      "description": "dhrd",
+      "date": "",
+      "tag": "dhd",
+      "tagColor": "dhdh",
+      "id": 15
+    },
+    {
+      "title": "kjnkjn",
+      "description": "jnkn",
+      "date": "",
+      "tag": "njkn",
+      "tagColor": "jnk",
+      "id": 16
+    },
+    {
+      "title": "kjnkjn",
+      "description": "jnkn",
+      "date": "",
+      "tag": "njkn",
+      "tagColor": "jnk",
+      "id": 17
+    },
+    {
+      "title": "Testing this one",
+      "description": "",
+      "date": "",
+      "tag": "",
+      "tagColor": "",
+      "id": 18
+    },
+    {
+      "title": "Test date",
+      "description": "",
+      "date": "2021-12-19",
+      "tag": "",
+      "tagColor": "",
+      "id": 19
     }
   ]
 }

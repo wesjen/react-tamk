@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineClose, AiOutlineCheck } from "react-icons/ai";
+import { AiOutlineClose } from "react-icons/ai";
 
 function Task(props) {
   const [task, setTask] = useState({
@@ -7,12 +7,36 @@ function Task(props) {
     description: props.description,
     date: props.date,
     tag: props.tag,
-    done: props.done,
+    tagColor: props.tagColor,
   });
 
   // TODO : ICONS
   return (
-    <div className={`task-container ${task.tag}`}>
+    <tr className={`task-container ${task.tagColor}`}>
+      <td>
+        <h2>{task.title}</h2>
+      </td>
+      <td>{task.description}</td>
+      <td>{task.date}</td>
+      <td className="task-tags">{task.tag}</td>
+      <td>
+        <AiOutlineClose
+          style={{ color: "red", cursor: "pointer" }}
+          onClick={() => props.delete(props.id)}
+        />
+      </td>
+      <td>
+        <input type="checkbox"></input>
+      </td>
+    </tr>
+  );
+}
+
+export default Task;
+
+/*
+
+<div className={`task-container ${task.tag}`}>
       <div className="task-items">
         <h2>{task.title}</h2>
         <p>{task.description}</p>
@@ -27,7 +51,5 @@ function Task(props) {
         <input type="checkbox"></input>
       </div>
     </div>
-  );
-}
 
-export default Task;
+*/

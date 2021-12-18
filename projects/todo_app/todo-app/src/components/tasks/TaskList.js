@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Task from "./Task";
-import AddTask from "./AddTask";
+// import AddTask from "./AddTask";
 
 function TaskList(props) {
-  let uniqueID = 0;
+  const tasksURL = "http://localhost:3010/tasks/";
   const [todos, setTodos] = useState([]);
-  var showAddTaskForm = false;
 
   useEffect(() => {
     const getTaskDB = async () => {
@@ -18,7 +17,7 @@ function TaskList(props) {
 
   // Remove task
   const removeTask = async (id) => {
-    let del = await fetch(`http://localhost:3010/tasks/${id}`, {
+    let del = await fetch(tasksURL + id, {
       method: "DELETE",
     });
     del.status === 200
@@ -26,24 +25,24 @@ function TaskList(props) {
       : alert("Error with deleting task");
   };
 
-  // Add Task
-  const addTask = async (task) => {
-    let added = await fetch("http://localhost:3010/tasks", {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(task),
-    });
+  // // Add Task
+  // const addTask = async (task) => {
+  //   let added = await fetch(tasksURL, {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-type": "application/json",
+  //     },
+  //     body: JSON.stringify(task),
+  //   });
 
-    let data = await added.json();
+  //   let data = await added.json();
 
-    setTodos([...todos, data]);
-  };
+  //   setTodos([...todos, data]);
+  // };
 
   // Fetch Tasks
   const fetchTasks = async () => {
-    let tasks = await fetch("http://localhost:3010/tasks");
+    let tasks = await fetch(tasksURL);
     return tasks.json();
   };
 
@@ -60,7 +59,7 @@ function TaskList(props) {
           description={task.description}
           date={task.date}
           tag={task.tag}
-          done={task.done}
+          tagColor={task.tagColor}
           delete={removeTask}
         />
       );
@@ -71,13 +70,10 @@ function TaskList(props) {
   // LISTS ALL TASKS
   return (
     <div className="task-list-div" key={Math.random()}>
-      {showAddTaskForm ? (
-        <AddTask />
-      ) : (
-        <button className="task-add-btn">Add new task</button>
-      )}
       <h1>Tasks</h1>
-      <div className="task-list-container">{makeRows()}</div>
+      <table className="task-list-container">
+        <tbody>{makeRows()}</tbody>
+      </table>
     </div>
   );
 }

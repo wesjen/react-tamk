@@ -6,6 +6,7 @@ body > * {
   font-family: "Comfortaa", cursive;
   background-color: rgb(36, 36, 36);
   display: block;
+  text-align: center;
 }
 
 p,
@@ -21,29 +22,14 @@ h2 {
 .task-container {
   padding: 2%;
   background-color: rgb(85, 85, 85);
-  border-radius: 1.5em;
-  display: flex;
-  margin: 0.5%;
-}
-
-.task-items {
-  flex: 4;
-}
-
-.task-icons {
-  flex: 1;
-}
-
-.task-icons > * {
-  width: 100%;
 }
 
 .task-container > * {
-  margin: 0.5em;
+  padding: 0.5em;
 }
 
 /*TASKS - TAGS */
-.Chores {
+.brown {
   background-color: brown;
 }
 
@@ -51,30 +37,28 @@ h2 {
   font-family: "Nova Mono", monospace;
 }
 
-/* TASK ADD - BUTTON */
-/*.task-add-btn {
-}
-*/
-
 /* TASK LIST */
-.task-list-div {
-  text-align: center;
-}
 .task-list-container {
-  text-align: left;
   margin: auto;
-  width: 50vw;
-  display: flex;
 }
 
-/* ADDTASK */
-.add-task-div {
-  text-align: center;
+/* ADD-TASKS */
+.add-form > * {
+  display: block;
+  padding: 0.5em;
+}
+
+.add-form label {
+  color: white;
+  font-size: 1.5em;
+}
+
+.add-form input {
+  width: 50%;
 }
 
 /* MENU */
 .menu-bar {
-  text-align: center;
   padding: 2%;
 }
 
@@ -88,9 +72,4 @@ h2 {
   margin: 0.2%;
   background-color: rgb(53, 255, 255);
   border-color: rgb(53, 255, 255);
-}
-
-/* INFO */
-.info-div {
-  text-align: center;
 }
