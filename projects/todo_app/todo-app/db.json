@@ -8,58 +8,6 @@
       "tagColor": "brown"
     },
     {
-      "title": "Test add",
-      "description": "Test description",
-      "date": "0202-01-03",
-      "tag": "TestTag",
-      "id": 8
-    },
-    {
-      "title": "Testing!",
-      "description": "Test description",
-      "date": "0202-01-03",
-      "tag": "TestTag",
-      "id": 12
-    },
-    {
-      "id": 13
-    },
-    {
-      "id": 14
-    },
-    {
-      "title": "sgsegs",
-      "description": "dhrd",
-      "date": "",
-      "tag": "dhd",
-      "tagColor": "dhdh",
-      "id": 15
-    },
-    {
-      "title": "kjnkjn",
-      "description": "jnkn",
-      "date": "",
-      "tag": "njkn",
-      "tagColor": "jnk",
-      "id": 16
-    },
-    {
-      "title": "kjnkjn",
-      "description": "jnkn",
-      "date": "",
-      "tag": "njkn",
-      "tagColor": "jnk",
-      "id": 17
-    },
-    {
-      "title": "Testing this one",
-      "description": "",
-      "date": "",
-      "tag": "",
-      "tagColor": "",
-      "id": 18
-    },
-    {
       "title": "Test date",
       "description": "",
       "date": "2021-12-19",
@@ -74,22 +22,6 @@
       "tag": "",
       "tagColor": "",
       "id": 20
-    },
-    {
-      "title": "sgz",
-      "description": "zseg",
-      "date": "",
-      "tag": "zsegz",
-      "tagColor": "seg",
-      "id": 21
-    },
-    {
-      "title": "sfa",
-      "description": "",
-      "date": "",
-      "tag": "",
-      "tagColor": "",
-      "id": 22
     },
     {
       "title": "Wash the dishes",
@@ -108,20 +40,36 @@
       "id": 24
     },
     {
-      "title": "zvzvz",
+      "title": "Purple",
       "description": "",
       "date": "",
       "tag": "",
-      "tagColor": "red",
-      "id": 25
+      "tagColor": "purple",
+      "id": 29
     },
     {
-      "title": "sfsf",
+      "title": "Cyan",
       "description": "",
       "date": "",
       "tag": "",
-      "tagColor": "green",
-      "id": 26
+      "tagColor": "cyan",
+      "id": 30
+    },
+    {
+      "title": "Orange",
+      "description": "",
+      "date": "",
+      "tag": "",
+      "tagColor": "orange",
+      "id": 31
+    },
+    {
+      "title": "Golden",
+      "description": "sojfosij",
+      "date": "",
+      "tag": "osijos",
+      "tagColor": "golden",
+      "id": 32
     }
   ]
 }

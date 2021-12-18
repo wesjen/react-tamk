@@ -118,11 +118,11 @@ function AddTask(props) {
 
         <label htmlFor="tagColor">Color for this task</label>
         <select id="tagColor" value={newTask.tagColor} onChange={inputChanged}>
-          <option value="none" selected>
-            None
-          </option>
-          <option value="green">Green</option>
-          <option value="red">Red</option>
+          <option value="none">None</option>
+          <option value="purple">Purple</option>
+          <option value="cyan">Cyan</option>
+          <option value="orange">Orange</option>
+          <option value="golden">Golden</option>
         </select>
 
         <button type="submit">Add</button>
@@ -132,16 +132,3 @@ function AddTask(props) {
 }
 
 export default AddTask;
-
-// {
-//   /* <select id="cars" name="cars">
-//   <option value="fiat" selected>
-//     Fiat
-//   </option>
-//   <select id="cars" name="cars" size="3"></select>
-//   <option value="volvo">Volvo</option>
-//   <option value="saab">Saab</option>
-//   <option value="fiat">Fiat</option>
-//   <option value="audi">Audi</option>
-// </select>; */
-// }

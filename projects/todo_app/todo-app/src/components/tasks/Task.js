@@ -19,7 +19,7 @@ function Task(props) {
       <td className="task-tags">{task.tag}</td>
       <td>
         <AiOutlineClose
-          style={{ color: "red", cursor: "pointer" }}
+          style={{ color: "white", cursor: "pointer" }}
           onClick={() => props.delete(props.id)}
         />
       </td>

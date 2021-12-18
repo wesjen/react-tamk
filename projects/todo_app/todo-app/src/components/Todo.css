@@ -27,8 +27,20 @@ h2 {
 }
 
 /*TASKS - TAGS */
-.brown {
-  background-color: brown;
+.purple {
+  background-color: purple;
+}
+
+.cyan {
+  background-color: rgb(9, 102, 102);
+}
+
+.orange {
+  background-color: rgb(212, 57, 0);
+}
+
+.golden {
+  background-color: rgb(187, 142, 30);
 }
 
 .task-tags {
