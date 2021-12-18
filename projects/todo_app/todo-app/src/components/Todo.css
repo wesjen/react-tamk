@@ -7,6 +7,7 @@ body > * {
   background-color: rgb(36, 36, 36);
   display: block;
   text-align: center;
+  max-width: 100vw;
 }
 
 p,
@@ -14,9 +15,6 @@ h1,
 h2 {
   color: white;
 }
-
-/* TODO TASK CONTAINER */
-/* TASK-LIST CONTAINER */
 
 /* TASK - SINGLE TASK CONTAINER */
 .task-container {
@@ -38,11 +36,33 @@ h2 {
 }
 
 /* TASK LIST */
+.task-list-div {
+  max-width: 100vw;
+}
+
 .task-list-container {
   margin: auto;
+  width: 90%;
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.task-list-container td {
+  overflow: auto;
+  color: white;
+}
+
+/* TASKLIST - ICONS */
+.task-list-container td:nth-child(5),
+.task-list-container td:nth-child(6) {
+  width: 3%;
+  overflow: hidden;
 }
 
 /* ADD-TASKS */
+.add-task-div {
+  align-items: center;
+}
 .add-form > * {
   display: block;
   padding: 0.5em;
@@ -51,10 +71,16 @@ h2 {
 .add-form label {
   color: white;
   font-size: 1.5em;
+  text-align: left;
 }
 
 .add-form input {
   width: 50%;
+  border-radius: 1.5em;
+  padding: 1em;
+  font-family: "Comfortaa", cursive;
+  margin: 0.5em;
+  border-bottom: 0.3em darkblue solid;
 }
 
 /* MENU */

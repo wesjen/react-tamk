@@ -13,9 +13,7 @@ function Task(props) {
   // TODO : ICONS
   return (
     <tr className={`task-container ${task.tagColor}`}>
-      <td>
-        <h2>{task.title}</h2>
-      </td>
+      <td>{task.title}</td>
       <td>{task.description}</td>
       <td>{task.date}</td>
       <td className="task-tags">{task.tag}</td>

@@ -47,6 +47,7 @@ function AddTask(props) {
     setNewTask({ ...newTask, [event.target.id]: event.target.value });
   };
 
+  // Null newTask
   const nullNewTask = () => {
     setNewTask({
       title: "",
@@ -57,54 +58,48 @@ function AddTask(props) {
     });
   };
 
+  // If Adding was successfull
   const successfullPost = () => {
     nullNewTask();
     alert("Task added successfully!");
   };
 
+  // If adding failed
   const failedPost = () => {
     nullNewTask();
     alert("Couldn't add task");
   };
 
+  // Submit
   const addAndSubmit = async (e) => {
     e.preventDefault();
 
     addTask(newTask);
   };
 
-  // addTask({
-  //   title: e.target.name.title,
-  //   description: e.target.name.description,
-  //   date: e.target.name.date,
-  //   tag: e.target.name.tag,
-  //   tagColor: e.target.name.tagColor,
-  // });
-
-  // <label for="fname">First name:</label><br>
-  // <input type="text" id="fname" name="fname"><br></br>
-
   return (
     <div className="add-task-div">
       <form onSubmit={addAndSubmit} className="add-form">
-        <label for="title">Title of the task</label>
+        <label htmlFor="title">Title of the task</label>
         <input
           type="text"
           id="title"
           value={newTask.title}
           required
           onChange={inputChanged}
+          maxLength="50"
         ></input>
 
-        <label for="description">Description of task</label>
+        <label htmlFor="description">Description of task</label>
         <input
           type="textfield"
           id="description"
           value={newTask.description}
           onChange={inputChanged}
+          maxLength="150"
         ></input>
 
-        <label for="date">Date for the task</label>
+        <label htmlFor="date">Date for the task</label>
         <input
           type="date"
           id="date"
@@ -112,21 +107,23 @@ function AddTask(props) {
           onChange={inputChanged}
         ></input>
 
-        <label for="tag">Tag for task</label>
+        <label htmlFor="tag">Tag for task</label>
         <input
           type="text"
           id="tag"
           value={newTask.tag}
           onChange={inputChanged}
+          maxLength="30"
         ></input>
 
-        <label for="tagColor">Color for this task</label>
-        <input
-          type="text"
-          id="tagColor"
-          value={newTask.tagColor}
-          onChange={inputChanged}
-        ></input>
+        <label htmlFor="tagColor">Color for this task</label>
+        <select id="tagColor" value={newTask.tagColor} onChange={inputChanged}>
+          <option value="none" selected>
+            None
+          </option>
+          <option value="green">Green</option>
+          <option value="red">Red</option>
+        </select>
 
         <button type="submit">Add</button>
       </form>
@@ -135,3 +132,16 @@ function AddTask(props) {
 }
 
 export default AddTask;
+
+// {
+//   /* <select id="cars" name="cars">
+//   <option value="fiat" selected>
+//     Fiat
+//   </option>
+//   <select id="cars" name="cars" size="3"></select>
+//   <option value="volvo">Volvo</option>
+//   <option value="saab">Saab</option>
+//   <option value="fiat">Fiat</option>
+//   <option value="audi">Audi</option>
+// </select>; */
+// }

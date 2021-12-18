@@ -25,21 +25,6 @@ function TaskList(props) {
       : alert("Error with deleting task");
   };
 
-  // // Add Task
-  // const addTask = async (task) => {
-  //   let added = await fetch(tasksURL, {
-  //     method: "POST",
-  //     headers: {
-  //       "Content-type": "application/json",
-  //     },
-  //     body: JSON.stringify(task),
-  //   });
-
-  //   let data = await added.json();
-
-  //   setTodos([...todos, data]);
-  // };
-
   // Fetch Tasks
   const fetchTasks = async () => {
     let tasks = await fetch(tasksURL);
