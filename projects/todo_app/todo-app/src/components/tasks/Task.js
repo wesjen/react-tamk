@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 import { AiOutlineClose } from "react-icons/ai";
+import { Draggable } from "react-beautiful-dnd";
 
 function Task(props) {
   const [task, setTask] = useState({
+    id: props.id,
     title: props.title,
     description: props.description,
     date: props.date,
@@ -12,21 +14,34 @@ function Task(props) {
 
   // TODO : ICONS
   return (
-    <tr className={`task-container ${task.tagColor}`}>
-      <td>{task.title}</td>
-      <td>{task.description}</td>
-      <td>{task.date}</td>
-      <td className="task-tags">{task.tag}</td>
-      <td>
-        <AiOutlineClose
-          style={{ color: "white", cursor: "pointer" }}
-          onClick={() => props.delete(props.id)}
-        />
-      </td>
-      <td>
-        <input type="checkbox"></input>
-      </td>
-    </tr>
+    <Draggable
+      draggableId={task.id.toString()}
+      index={props.index}
+      style={{ display: "table" }}
+    >
+      {(provided) => (
+        <tr
+          className={`task-container ${task.tagColor}`}
+          {...provided.draggableProps}
+          {...provided.dragHandleProps}
+          ref={provided.innerRef}
+        >
+          <td>{task.title}</td>
+          <td>{task.description}</td>
+          <td>{task.date}</td>
+          <td className="task-tags">{task.tag}</td>
+          <td>
+            <AiOutlineClose
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={() => props.delete(props.id)}
+            />
+          </td>
+          <td>
+            <input type="checkbox"></input>
+          </td>
+        </tr>
+      )}
+    </Draggable>
   );
 }
 
