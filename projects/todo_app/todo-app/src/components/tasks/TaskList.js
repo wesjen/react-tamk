@@ -53,28 +53,51 @@ function TaskList(props) {
   // };
 
   const dragEnd = (result) => {
+    const addTask = async (task) => {
+      let added = await fetch(tasksURL, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(task),
+      });
+
+      let data = await added.json();
+
+      setTodos([...todos, data]);
+    };
+
     const { destination, source, draggableId } = result;
+    // let tmpArr = todos;
 
-    // if (!destination) {
-    //   return;
-    // }
+    if (!destination) {
+      return;
+    }
 
-    // if (
-    //   destination.droppableId === source.droppableId &&
-    //   destination.index === source.index
-    // ) {
-    //   return;
-    // }
+    if (
+      destination.droppableId === source.droppableId &&
+      destination.index === source.index
+    ) {
+      return;
+    }
 
-    let obj = source.droppableId;
-    let newTaskID = Array.from(obj.taskIds);
+    let obj = todos[source.index];
+    console.log(obj);
+    let newTaskID = Array.from(obj.id);
     newTaskID.splice(source.index, 1);
     newTaskID.splice(destination.index, 0, draggableId);
 
     let newRow = {
-      ...obj,
-      taskIds: newTaskID,
+      ...todos,
+      index: newTaskID,
     };
+
+    addTask(newRow);
+
+    // console.log(todos);
+
+    // setTodos(newRow);
+    // console.log(todos);
   };
 
   // LISTS ALL TASKS
