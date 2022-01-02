@@ -11,6 +11,7 @@ function AddTask(props) {
     tagColor: "",
   });
 
+  // Fetch tasks from server
   useEffect(() => {
     const getTaskDB = async () => {
       let tasks = await fetchTasks();
@@ -58,13 +59,13 @@ function AddTask(props) {
     });
   };
 
-  // If Adding was successfull
+  // Alert if successfull post
   const successfullPost = () => {
     nullNewTask();
     alert("Task added successfully!");
   };
 
-  // If adding failed
+  // Alert if posting failed
   const failedPost = () => {
     nullNewTask();
     alert("Couldn't add task");
@@ -77,6 +78,7 @@ function AddTask(props) {
     addTask(newTask);
   };
 
+  // Return Add task -form
   return (
     <div className="add-task-div">
       <form onSubmit={addAndSubmit} className="add-form">

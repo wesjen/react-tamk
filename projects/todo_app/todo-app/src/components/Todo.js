@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import TaskList from "./tasks/TaskList";
-import Info from "./interfaces/Info";
+import Info from "./Info";
 import AddTask from "./tasks/AddTask";
 import "./Todo.css";
 
 function ToDo() {
   const [activeInterface, setActiveInterface] = useState();
 
+  // Change interface when menu-bar's buttons are clicked
   const changeInterface = (clickedIF) => setActiveInterface(clickedIF);
 
   return (

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineClose, AiFillEdit } from "react-icons/ai";
 import { Draggable } from "react-beautiful-dnd";
 
 function Task(props) {
@@ -12,7 +12,6 @@ function Task(props) {
     tagColor: props.tagColor,
   });
 
-  // TODO : ICONS
   return (
     <Draggable
       draggableId={task.id.toString()}
@@ -27,17 +26,38 @@ function Task(props) {
           ref={provided.innerRef}
         >
           <td>{task.title}</td>
+          <td className="icon">
+            <AiFillEdit
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={() => props.update(props.id, "title")}
+            />
+          </td>
           <td>{task.description}</td>
+          <td className="icon">
+            <AiFillEdit
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={() => props.update(props.id, "description")}
+            />
+          </td>
           <td>{task.date}</td>
+          <td className="icon">
+            <AiFillEdit
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={() => props.update(props.id, "date")}
+            />
+          </td>
           <td className="task-tags">{task.tag}</td>
-          <td>
+          <td className="icon">
+            <AiFillEdit
+              style={{ color: "white", cursor: "pointer" }}
+              onClick={() => props.update(props.id, "tag")}
+            />
+          </td>
+          <td className="icon">
             <AiOutlineClose
               style={{ color: "white", cursor: "pointer" }}
               onClick={() => props.delete(props.id)}
             />
-          </td>
-          <td>
-            <input type="checkbox"></input>
           </td>
         </tr>
       )}
@@ -46,23 +66,3 @@ function Task(props) {
 }
 
 export default Task;
-
-/*
-
-<div className={`task-container ${task.tag}`}>
-      <div className="task-items">
-        <h2>{task.title}</h2>
-        <p>{task.description}</p>
-        <p>{task.date} </p>
-        <p className="task-tags">{task.tag} </p>
-      </div>
-      <div className="task-icons">
-        <AiOutlineClose
-          style={{ color: "red", cursor: "pointer" }}
-          onClick={() => props.delete(props.id)}
-        />
-        <input type="checkbox"></input>
-      </div>
-    </div>
-
-*/

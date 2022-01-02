@@ -1,75 +1,44 @@
 {
   "tasks": [
     {
-      "id": 2,
-      "title": "Walk the dog",
-      "description": "10 KM",
-      "tag": "Exercise",
-      "tagColor": "brown"
-    },
-    {
-      "title": "Test date",
-      "description": "",
-      "date": "2021-12-19",
-      "tag": "",
-      "tagColor": "",
-      "id": 19
-    },
-    {
-      "title": "jaoisjfoaijfiajwdaoijdoiajwdoiawjoijgoapfjojawoijd",
-      "description": "soijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoeisoijfoiesofjoei",
-      "date": "",
-      "tag": "",
-      "tagColor": "",
-      "id": 20
-    },
-    {
-      "title": "Wash the dishes",
-      "description": "Plates, glasses and PAN!",
-      "date": "2021-12-18",
-      "tag": "Chores",
-      "tagColor": "brown",
-      "id": 23
-    },
-    {
-      "title": "Purple",
-      "description": "",
-      "date": "",
-      "tag": "",
-      "tagColor": "purple",
-      "id": 29
-    },
-    {
-      "title": "Cyan",
-      "description": "",
-      "date": "",
-      "tag": "",
-      "tagColor": "cyan",
-      "id": 30
-    },
-    {
       "title": "Orange",
-      "description": "",
-      "date": "",
-      "tag": "",
+      "description": "Orange is a color",
+      "date": " ",
+      "tag": "Tags",
       "tagColor": "orange",
       "id": 31
     },
     {
-      "title": "Golden",
-      "description": "sojfosij",
-      "date": "",
-      "tag": "osijos",
+      "title": "Walk the dog",
+      "description": "10 KM",
+      "date": "2021-12-24",
+      "tag": "Exercise",
       "tagColor": "golden",
       "id": 32
     },
     {
-      "title": "Title",
-      "description": "hkhk",
-      "date": "2021-12-19",
-      "tag": "Examples",
+      "title": "Feed the cat",
+      "description": "Christmas meal",
+      "date": "2021-12-24",
+      "tag": "",
       "tagColor": "purple",
       "id": 33
+    },
+    {
+      "title": "Go to store",
+      "description": "",
+      "date": "2021-12-22",
+      "tag": "",
+      "tagColor": "",
+      "id": 34
+    },
+    {
+      "title": "Test",
+      "description": "Testing how it works",
+      "date": "2021-12-20",
+      "tag": "School",
+      "tagColor": "cyan",
+      "id": 35
     }
   ]
 }

@@ -6,6 +6,7 @@ function TaskList(props) {
   const tasksURL = "http://localhost:3010/tasks/";
   const [todos, setTodos] = useState([]);
 
+  // Fetch tasks from server
   useEffect(() => {
     const getTaskDB = async () => {
       let tasks = await fetchTasks();
@@ -25,55 +26,70 @@ function TaskList(props) {
       : alert("Error with deleting task");
   };
 
+  // Update a task
+  const updateTask = async (id, editableAtt) => {
+    let newTodo = todos.filter((task) => task.id === id);
+    let newTask = newTodo[0];
+
+    const edit = async () => {
+      // Alert if editing successful
+      const successfullPost = () => {
+        alert("Task edited successfully!");
+      };
+
+      // Alert if editing failed
+      const failedPost = () => {
+        alert("Couldn't edit task");
+      };
+
+      let res = await fetch(tasksURL + id, {
+        method: "PUT",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(newTask),
+      });
+
+      res.status === 200 ? successfullPost() : failedPost();
+    };
+
+    switch (editableAtt) {
+      case "title":
+        newTask.title = prompt("Insert new title");
+        edit();
+        break;
+      case "description":
+        newTask.description = prompt("Insert new description");
+        edit();
+        break;
+      case "date":
+        newTask.date = prompt("Insert new date");
+        edit();
+        break;
+      case "tag":
+        newTask.tag = prompt("Insert new tag");
+        edit();
+        break;
+      default:
+        alert("No editable attributes");
+    }
+  };
+
   // Fetch Tasks
   const fetchTasks = async () => {
     let tasks = await fetch(tasksURL);
     return tasks.json();
   };
 
-  // // Make the rows to show all rows
-  // const makeRows = () => {
-  //   let returnableRows = [];
-
-  //   for (let task of todos) {
-  //     returnableRows.push(
-  //       <Task
-  //         key={task.id}
-  //         id={task.id}
-  //         title={task.title}
-  //         description={task.description}
-  //         date={task.date}
-  //         tag={task.tag}
-  //         tagColor={task.tagColor}
-  //         delete={removeTask}
-  //       />
-  //     );
-  //   }
-  //   return returnableRows;
-  // };
-
   const dragEnd = (result) => {
-    const addTask = async (task) => {
-      let added = await fetch(tasksURL, {
-        method: "PUT",
-        headers: {
-          "Content-type": "application/json",
-        },
-        body: JSON.stringify(task),
-      });
+    const { destination, source } = result;
 
-      let data = await added.json();
-
-      setTodos([...todos, data]);
-    };
-
-    const { destination, source, draggableId } = result;
-    // let tmpArr = todos;
-
+    // Error catching
     if (!destination) {
       return;
     }
 
+    // Error catching
     if (
       destination.droppableId === source.droppableId &&
       destination.index === source.index
@@ -83,21 +99,8 @@ function TaskList(props) {
 
     let obj = todos[source.index];
     console.log(obj);
-    let newTaskID = Array.from(obj.id);
-    newTaskID.splice(source.index, 1);
-    newTaskID.splice(destination.index, 0, draggableId);
-
-    let newRow = {
-      ...todos,
-      index: newTaskID,
-    };
-
-    addTask(newRow);
-
-    // console.log(todos);
-
-    // setTodos(newRow);
-    // console.log(todos);
+    todos.splice(source.index, 1);
+    todos.splice(destination.index, 0, obj);
   };
 
   // LISTS ALL TASKS
@@ -120,6 +123,7 @@ function TaskList(props) {
                     tag={task.tag}
                     tagColor={task.tagColor}
                     delete={removeTask}
+                    update={updateTask}
                   />
                 ))}
                 {provided.placeholder}

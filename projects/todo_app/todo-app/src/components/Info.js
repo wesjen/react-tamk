@@ -1,10 +1,17 @@
-// TODO: MANUAL/INSTRUCTIONS HOW TO USE
-
 function Info() {
   return (
     <div className="info-div">
-      <h1 style={{ color: "red" }}>How to use</h1>
-      <p style={{ color: "red" }}>ADD HOW TO USE INSTRUCTIONS</p>
+      <h1>How to use</h1>
+      <p>
+        Make sure to open json-server <br />
+        Add new tasks from 'Add new task+' -tab.
+        <br />
+        All tasks listed in Home-tab.
+        <br /> Delete tasks py pressing X-icon.
+        <br /> Update a task py pressing pen-icon and RELOAD/move to another tap
+        after to see the changes.
+        <br /> Momentarily rearrange tasks by dragging.
+      </p>
       <h2>Creator</h2>
       <p>Creator of this App is Jenna Westerlund</p>
       <h2>Licences</h2>
