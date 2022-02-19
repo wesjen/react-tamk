@@ -3,7 +3,7 @@ import Task from "./Task";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function TaskList(props) {
-  const port = process.env.PORT || 3010;
+  const port = process.env.PORT || 8000;
   const tasksURL = `http://localhost:${port}/tasks/`;
   const [todos, setTodos] = useState([]);
 
