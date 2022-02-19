@@ -3,7 +3,7 @@ import Task from "./Task";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function TaskList(props) {
-  const tasksURL = `https://react-todo-app-tamk.herokuapp.com/api/tasks`;
+  const tasksURL = `https://react-todo-app-tamk.herokuapp.com/tasks`;
   const [todos, setTodos] = useState([]);
 
   // Fetch tasks from server
