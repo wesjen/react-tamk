@@ -3,7 +3,8 @@ import Task from "./Task";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function TaskList(props) {
-  const tasksURL = "http://localhost:3010/tasks/";
+  const port = process.env.PORT || 3010;
+  const tasksURL = `http://localhost:${port}/tasks/`;
   const [todos, setTodos] = useState([]);
 
   // Fetch tasks from server
