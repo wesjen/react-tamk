@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 
 function AddTask(props) {
-  const tasksURL = "http://localhost:3010/tasks/";
+  const tasksURL = "https://react-todo-app-tamk.herokuapp.com/api";
   const [todos, setTodos] = useState([]);
   const [newTask, setNewTask] = useState({
     title: "",
