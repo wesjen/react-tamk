@@ -3,12 +3,11 @@ function Info() {
     <div className="info-div">
       <h1>How to use</h1>
       <p>
-        Make sure to open json-server <br />
         Add new tasks from 'Add new task+' -tab.
         <br />
         All tasks listed in Home-tab.
         <br /> Delete tasks py pressing X-icon.
-        <br /> Update a task py pressing pen-icon and RELOAD/move to another tap
+        <br /> Update a task py pressing pen-icon and RELOAD/MOVE to another tap
         after to see the changes.
         <br /> Momentarily rearrange tasks by dragging.
       </p>
@@ -27,7 +26,7 @@ function Info() {
   );
 }
 
-/* Copyright 2021 Jenna Westerlund
+/* Copyright 2022
 
 Permission is hereby granted, free of charge,
 to any person obtaining a copy of this software and associated documentation files
