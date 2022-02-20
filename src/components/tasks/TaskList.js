@@ -3,7 +3,7 @@ import Task from "./Task";
 import { DragDropContext, Droppable } from "react-beautiful-dnd";
 
 function TaskList(props) {
-  const tasksURL = `/tasks`;
+  const tasksURL = `/tasks/`;
   const [todos, setTodos] = useState([]);
 
   // Fetch tasks from server
